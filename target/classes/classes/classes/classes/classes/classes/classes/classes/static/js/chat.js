@@ -5,9 +5,9 @@ $('.controls').css({display: 'flex'});
 //TODO: init events
 };
 let registerUser = function(name) {
-$.post('/auth', {name: name},function(response){
+$.post('/auth',{name: name},function(response){
 if(response.result) {
-initApplication();
+initApplication;
 }
 });
 };
