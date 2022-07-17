@@ -16,6 +16,14 @@ public class Message {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
 
+  public void setUser(User user) {
+    this.user = user;
+  }
+
+  public User getUser() {
+    return user;
+  }
+
   @ManyToOne(fetch = FetchType.EAGER, optional = false)
   @JoinColumn(name = "user_id", nullable = false)
   private User user;
